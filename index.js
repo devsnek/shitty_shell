@@ -10,7 +10,7 @@ function writePrompt() {
 }
 
 function write(x) {
-  if (!x) return;
+  if (typeof x === 'string' && !x.length) return;
   const p = util.inspect(x, {
     colors: true,
   });
